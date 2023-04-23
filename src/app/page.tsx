@@ -1,5 +1,5 @@
-import { FormTask } from "./components/FormTask";
-import { ListTask } from "./components/ListTask";
+import { FormTask } from "../components/FormTask";
+import { ListTask } from "../components/ListTask";
 
 export default function Home() {
 

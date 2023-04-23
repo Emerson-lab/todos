@@ -1,6 +1,7 @@
-import { TaskProvider } from './context/TextContext'
+import { TaskProvider } from '../context/TextContext'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Home from './page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TaskProvider>
-          {children}
+         {children}
         </TaskProvider>
       </body>
     </html>

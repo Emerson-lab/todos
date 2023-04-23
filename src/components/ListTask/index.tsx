@@ -2,14 +2,14 @@
 
 import { useContext } from 'react'
 import { AiFillRest } from 'react-icons/ai'
-import { TaskContext } from 'src/app/context/TextContext'
+import { TaskContext } from 'src/context/TextContext'
 import { SearchTask } from './SearchTask';
 
 export function ListTask() {
   const {
     tasks,
     filteredTasks,
-    handleDeleteTodo
+    handleDeleteTask
   } = useContext(TaskContext);
   
   return (
@@ -19,11 +19,11 @@ export function ListTask() {
 
          <SearchTask/>
 
-          {filteredTasks.map(todo => (
-            <div key={todo.id}>
+          {filteredTasks.map(task => (
+            <div key={task.id}>
               <div className="border border-slate-700 flex justify-between px-10">
-                <p>{todo.title}</p>
-                <button onClick={() => handleDeleteTodo(todo.id)}>
+                <p>{task.title}</p>
+                <button onClick={() => handleDeleteTask(task.id)}>
                   <AiFillRest size={20} />
                 </button>
               </div>
